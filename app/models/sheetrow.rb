@@ -1,0 +1,2 @@
+class Sheetrow < ApplicationRecord
+end

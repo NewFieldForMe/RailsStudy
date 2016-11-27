@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order num:</strong>
+  <%= @sheetrow.order_num %>
+</p>
+
+<p>
+  <strong>Scene type:</strong>
+  <%= @sheetrow.scene_type %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @sheetrow.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @sheetrow.end_date %>
+</p>
+
+<p>
+  <strong>Comment title:</strong>
+  <%= @sheetrow.comment_title %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @sheetrow.comment %>
+</p>
+
+<%= link_to 'Edit', edit_sheetrow_path(@sheetrow) %> |
+<%= link_to 'Back', sheetrows_path %>

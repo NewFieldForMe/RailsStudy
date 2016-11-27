@@ -1,0 +1,47 @@
+<%= form_for(sheetrow) do |f| %>
+  <% if sheetrow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sheetrow.errors.count, "error") %> prohibited this sheetrow from being saved:</h2>
+
+      <ul>
+      <% sheetrow.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order_num %>
+    <%= f.number_field :order_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scene_type %>
+    <%= f.text_field :scene_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment_title %>
+    <%= f.text_area :comment_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_area :comment %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

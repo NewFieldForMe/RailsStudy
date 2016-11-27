@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_num: 1
+  scene_type: MyString
+  start_date: 2016-11-27
+  end_date: 2016-11-27
+  comment_title: MyText
+  comment: MyText
+
+two:
+  order_num: 1
+  scene_type: MyString
+  start_date: 2016-11-27
+  end_date: 2016-11-27
+  comment_title: MyText
+  comment: MyText

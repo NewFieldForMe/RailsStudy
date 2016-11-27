@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sheetrows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order num</th>
+      <th>Scene type</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Comment title</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sheetrows.each do |sheetrow| %>
+      <tr>
+        <td><%= sheetrow.order_num %></td>
+        <td><%= sheetrow.scene_type %></td>
+        <td><%= sheetrow.start_date %></td>
+        <td><%= sheetrow.end_date %></td>
+        <td><%= sheetrow.comment_title %></td>
+        <td><%= sheetrow.comment %></td>
+        <td><%= link_to 'Show', sheetrow %></td>
+        <td><%= link_to 'Edit', edit_sheetrow_path(sheetrow) %></td>
+        <td><%= link_to 'Destroy', sheetrow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sheetrow', new_sheetrow_path %>
