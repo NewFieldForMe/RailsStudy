@@ -10,35 +10,46 @@
       </ul>
     </div>
   <% end %>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("input:file.validation--failed").parents('input-field').find("input:text.file-path").first().addClass('validation--failed invalid');
+    Materialize.updateTextFields();
 
-  <div class="field">
+   $('.datepicker').pickadate({
+      format: 'mm/dd/yyyy',
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+  });
+  </script>
+  <div class="input-field">
     <%= f.label :order_num %>
     <%= f.number_field :order_num %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= f.label :scene_type %>
     <%= f.text_field :scene_type %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= f.label :start_date %>
-    <%= f.date_select :start_date %>
+    <%= f.text_field :start_date, class: "datepicker" %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= f.label :end_date %>
-    <%= f.date_select :end_date %>
+    <%= f.text_field :end_date, class: "datepicker" %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= f.label :comment_title %>
-    <%= f.text_area :comment_title %>
+    <%= f.text_area :comment_title, class: "materialize-textarea" %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= f.label :comment %>
-    <%= f.text_area :comment %>
+    <%= f.text_area :comment, class: "materialize-textarea" %>
   </div>
 
   <div class="actions">
