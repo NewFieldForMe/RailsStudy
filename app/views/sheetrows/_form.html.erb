@@ -16,7 +16,7 @@
     Materialize.updateTextFields();
 
    $('.datepicker').pickadate({
-      format: 'mm/dd/yyyy',
+      format: 'yyyy-mm-dd',
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 15 // Creates a dropdown of 15 years to control year
     });
@@ -44,7 +44,7 @@
 
   <div class="input-field">
     <%= f.label :comment_title %>
-    <%= f.text_area :comment_title, class: "materialize-textarea" %>
+    <%= f.text_field :comment_title %>
   </div>
 
   <div class="input-field">
@@ -52,7 +52,7 @@
     <%= f.text_area :comment, class: "materialize-textarea" %>
   </div>
 
-  <div class="actions">
+  <div class="actions waves-effect waves-light btn">
     <%= f.submit %>
   </div>
 <% end %>
