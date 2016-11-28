@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Sheetrows</h1>
+<h1>経歴一覧</h1>
 
 <%= link_to '行を追加する', new_sheetrow_path %>
 <table>
@@ -11,7 +11,7 @@
       <th>開始日</th>
       <th>終了日</th>
       <th>概要</th>
-      <th colspan="2"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -24,6 +24,7 @@
         <td widtH="100" rowspan="2"><%= sheetrow.end_date %></td>
         <td><%= sheetrow.comment_title %></td>
         <td rowspan="2"><%= link_to 'Edit', edit_sheetrow_path(sheetrow) %></td>
+        <td rowspan="2"><%= link_to 'Copy', copy_sheetrow_path(sheetrow) %></td>
         <td rowspan="2"><%= link_to 'Destroy', sheetrow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <tr>

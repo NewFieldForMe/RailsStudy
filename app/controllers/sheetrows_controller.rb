@@ -1,5 +1,5 @@
 class SheetrowsController < ApplicationController
-  before_action :set_sheetrow, only: [:show, :edit, :update, :destroy]
+  before_action :set_sheetrow, only: [:show, :edit, :copy, :update, :destroy]
 
   # GET /sheetrows
   # GET /sheetrows.json
@@ -15,6 +15,15 @@ class SheetrowsController < ApplicationController
   # GET /sheetrows/new
   def new
     @sheetrow = Sheetrow.new
+  end
+
+  # GET /sheetrows/1/copy
+  def copy
+    @copyrow = Sheetrow.find(params[:id])
+    @sheetrow = Sheetrow.new
+    @sheetrow.attributes = @copyrow.attributes
+
+    render :action => "new"
   end
 
   # GET /sheetrows/1/edit
