@@ -13,12 +13,13 @@
   <hr>
   <div class="row">
     <div class="col s4 offset-s3"><%= sheetrow.comment_title %></div>
+    <div class="col s1"><%= sheetrow.roll.name %></div>
   </div>
   <div class="row">
     <div class="col s1"><%= sheetrow.scene_type %> <%= sheetrow.order_num %></div>
     <div class="col s2"><%= sheetrow.start_date.strftime("%Y年%m月") %> <br> ~ <br> <%= sheetrow.end_date.strftime("%Y年%m月") %></div>
     <div class="col s4"><%= simple_format(sheetrow.comment) %></div>
-    <div class="col s1"><%= link_to 'Edit', edit_sheetrow_path(sheetrow) %> <br> <%= link_to 'Copy', copy_sheetrow_path(sheetrow) %> <br> <%= link_to 'Destroy', sheetrow, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <div class="col offset-s1 s1"><%= link_to 'Edit', edit_sheetrow_path(sheetrow) %> <br> <%= link_to 'Copy', copy_sheetrow_path(sheetrow) %> <br> <%= link_to 'Destroy', sheetrow, method: :delete, data: { confirm: 'Are you sure?' } %></div>
   </div>
   <% end %>
 </tbody>
