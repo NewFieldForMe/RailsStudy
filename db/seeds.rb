@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'factory_girl'
+
+FactoryGirl.create(:roll, name: "PM")
+FactoryGirl.create(:roll, name: "PL")
+FactoryGirl.create(:roll, name: "PG")
