@@ -59,6 +59,31 @@
     <%= f.collection_select :roll_id, Roll.all, :id, :name %>
   </div>
 
+  <div class="input-field">
+    <%= f.label :scale %>
+    <%= f.text_field :scale %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :DB %>
+    <%= f.text_field :DB %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :OS %>
+    <%= f.text_field :OS %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :tools %>
+    <%= f.text_field :tools %>
+  </div>
+
   <br>
 
   <div class="actions waves-effect waves-light btn">

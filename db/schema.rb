@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205140848) do
+ActiveRecord::Schema.define(version: 20161207131539) do
 
   create_table "rolls", force: :cascade do |t|
     t.string   "name"
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(version: 20161205140848) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "roll_id"
+    t.string   "scale"
+    t.string   "language"
+    t.string   "DB"
+    t.string   "OS"
+    t.string   "tools"
     t.index ["roll_id"], name: "index_sheetrows_on_roll_id"
   end
 

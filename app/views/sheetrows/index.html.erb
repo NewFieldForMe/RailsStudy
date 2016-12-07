@@ -6,20 +6,25 @@
 <tbody>
   <div class="row">
     <div class="col s1"><h5></h5></div>
-    <div class="col s2"><h5>日付</h5></div>
-    <div class="col s4"><h5>概要</h5></div>
+    <div class="col s1"><h5>日付</h5></div>
+    <div class="col s3"><h5>概要</h5></div>
   </div>
   <% @sheetrows.each do |sheetrow| %>
   <hr>
   <div class="row">
-    <div class="col s4 offset-s3"><%= sheetrow.comment_title %></div>
+    <div class="col s3 offset-s2"><%= sheetrow.comment_title %></div>
     <div class="col s1"><%= sheetrow.roll.name %></div>
   </div>
   <div class="row">
-    <div class="col s1"><%= sheetrow.scene_type %> <%= sheetrow.order_num %></div>
-    <div class="col s2"><%= sheetrow.start_date.strftime("%Y年%m月") %> <br> ~ <br> <%= sheetrow.end_date.strftime("%Y年%m月") %></div>
-    <div class="col s4"><%= simple_format(sheetrow.comment) %></div>
-    <div class="col offset-s1 s1"><%= link_to 'Edit', edit_sheetrow_path(sheetrow) %> <br> <%= link_to 'Copy', copy_sheetrow_path(sheetrow) %> <br> <%= link_to 'Destroy', sheetrow, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <div class="col s1"><%= sheetrow.scene_type %> : <%= sheetrow.order_num %></div>
+    <div class="col s1 font-mini-13"><%= sheetrow.start_date.strftime("%Y年%m月") %> <br> ~ <br> <%= sheetrow.end_date.strftime("%Y年%m月") %></div>
+    <div class="col s3"><%= simple_format(sheetrow.comment) %></div>
+    <div class="col s1"><%= sheetrow.scale %></div>
+    <div class="col s1 font-mini-11"><%= sheetrow.language %></div>
+    <div class="col s1 font-mini-11"><%= sheetrow.DB %></div>
+    <div class="col s1 font-mini-11"><%= sheetrow.OS %></div>
+    <div class="col s1 font-mini-11"><%= sheetrow.tools %></div>
+    <div class="col s1"><%= link_to 'Edit', edit_sheetrow_path(sheetrow) %> <br> <%= link_to 'Copy', copy_sheetrow_path(sheetrow) %> <br> <%= link_to 'Destroy', sheetrow, method: :delete, data: { confirm: 'Are you sure?' } %></div>
   </div>
   <% end %>
 </tbody>
