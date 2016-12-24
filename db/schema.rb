@@ -10,12 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207131539) do
+ActiveRecord::Schema.define(version: 20161210080809) do
+
+  create_table "assignment_processes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "rolls", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sheetrow_assignment_processes", force: :cascade do |t|
+    t.integer  "sheetrow_id"
+    t.integer  "assignment_process_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "sheetrows", force: :cascade do |t|

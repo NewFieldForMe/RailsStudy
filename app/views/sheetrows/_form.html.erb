@@ -86,10 +86,22 @@
     <%= f.text_field :tools %>
   </div>
 
-  <br>
-
   <div class="actions waves-effect waves-light btn">
     <%= f.submit %>
   </div>
+
+  <div class="input-field">
+    <%= collection_check_boxes(:post, :assignment_processes_ids, AssignmentProcess.all, :id, :name) do |b| %>
+      <p>
+        <%= b.label(class: "check_box") { b.check_box(class: "check_box") } %>
+      </p>
+    <% end %>
+  </div>
+  <p>
+    <input type="checkbox" id="test5" />
+    <label for="test5">Red</label>
+  </p>
+
+  <br>
 
 <% end %>

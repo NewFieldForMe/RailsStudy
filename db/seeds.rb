@@ -10,3 +10,12 @@ require 'factory_girl'
 FactoryGirl.create(:roll, name: "PM")
 FactoryGirl.create(:roll, name: "PL")
 FactoryGirl.create(:roll, name: "PG")
+
+FactoryGirl.create(:assignment_process, name: "管理業務")
+FactoryGirl.create(:assignment_process, name: "要件定義")
+FactoryGirl.create(:assignment_process, name: "基本設計")
+FactoryGirl.create(:assignment_process, name: "詳細設計")
+FactoryGirl.create(:assignment_process, name: "実装・単体")
+FactoryGirl.create(:assignment_process, name: "結合テスト")
+FactoryGirl.create(:assignment_process, name: "保守・運用")
+FactoryGirl.create(:assignment_process, name: "調査・分析")
