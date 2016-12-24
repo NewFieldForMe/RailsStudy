@@ -78,6 +78,9 @@ class SheetrowsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sheetrow_params
-      params.require(:sheetrow).permit(:order_num, :scene_type, :start_date, :end_date, :comment_title, :comment, :roll_id, :scale, :language, :DB, :OS, :tools)
+      params.require(:sheetrow).permit(
+      :order_num, :scene_type, :start_date, :end_date, :comment_title,
+      :comment, :roll_id, :scale, :language, :DB, :OS, :tools,
+      {:assignment_process_ids => []})
     end
 end

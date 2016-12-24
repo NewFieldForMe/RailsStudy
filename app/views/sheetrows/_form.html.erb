@@ -86,22 +86,19 @@
     <%= f.text_field :tools %>
   </div>
 
+  <div class="field">
+    <%= f.label :assignment_processes %><br />
+    <%= collection_check_boxes(:sheetrow, :assignment_process_ids, AssignmentProcess.all, :id, :name) do |b| %>
+      <%= b.check_box %>
+      <%= b.label { b.text } %>
+      <br />
+    <% end %>
+  </div>
+
+  <br>
+
   <div class="actions waves-effect waves-light btn">
     <%= f.submit %>
   </div>
-
-  <div class="input-field">
-    <%= collection_check_boxes(:post, :assignment_processes_ids, AssignmentProcess.all, :id, :name) do |b| %>
-      <p>
-        <%= b.label(class: "check_box") { b.check_box(class: "check_box") } %>
-      </p>
-    <% end %>
-  </div>
-  <p>
-    <input type="checkbox" id="test5" />
-    <label for="test5">Red</label>
-  </p>
-
-  <br>
 
 <% end %>
