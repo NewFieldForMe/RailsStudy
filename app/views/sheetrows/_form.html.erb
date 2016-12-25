@@ -25,6 +25,20 @@
 
     $('#sheetrow_comment').trigger('autoresize');
   });
+  $('textarea').each(function () {
+    //Calculate number of lines
+    var numberOfLines = $(this).val().split(/\r\n|\r|\n/).length;
+    //Get lineheight from CSS
+    var lineHeight = $(this).css('line-height');
+    //Convert from px-string to number
+    lineHeight = lineHeight.replace("px", "");
+    //Calculate height for textarea
+    var textAreaHeight = numberOfLines*lineHeight;
+    //Convert from number to px-string
+    var stylingTextAreaHeight = "".concat(textAreaHeight).concat("px");
+    //Set textarea height to calculated height
+    $(this).css("height",stylingTextAreaHeight);
+  });
   </script>
   <div class="input-field">
     <%= f.label :order_num %>
