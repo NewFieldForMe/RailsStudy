@@ -5,7 +5,7 @@ class SheetrowsController < ApplicationController
   # GET /sheetrows
   # GET /sheetrows.json
   def index
-    @sheetrows = Sheetrow.all
+    @sheetrows = Sheetrow.where(user_id: session[:user_id])
   end
 
   # GET /sheetrows/1
@@ -16,6 +16,7 @@ class SheetrowsController < ApplicationController
   # GET /sheetrows/new
   def new
     @sheetrow = Sheetrow.new
+    @sheetrow.user_id = session[:user_id]
   end
 
   # GET /sheetrows/1/copy
@@ -35,6 +36,7 @@ class SheetrowsController < ApplicationController
   # POST /sheetrows.json
   def create
     @sheetrow = Sheetrow.new(sheetrow_params)
+    @sheetrow.user_id = session[:user_id]
 
     respond_to do |format|
       if @sheetrow.save

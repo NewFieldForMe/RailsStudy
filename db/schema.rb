@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170103120803) do
+ActiveRecord::Schema.define(version: 20170103123240) do
 
   create_table "assignment_processes", force: :cascade do |t|
     t.string   "name"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20170103120803) do
     t.string   "DB"
     t.string   "OS"
     t.string   "tools"
+    t.integer  "user_id"
     t.index ["roll_id"], name: "index_sheetrows_on_roll_id"
   end
 

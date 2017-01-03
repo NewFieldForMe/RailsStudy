@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by_accountid(params[:accountid])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to '/'
+      redirect_to '/sheetrows'
     else
       redirect_to '/login'
     end
