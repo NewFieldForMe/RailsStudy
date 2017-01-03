@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   namespace :api, { format: 'json' } do
+    post 'authenticate' => 'authentication#authenticate'
     get 'sheetrows' => 'sheetrows#index'
   end
 end
