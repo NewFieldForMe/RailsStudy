@@ -1,5 +1,6 @@
 class SheetrowsController < ApplicationController
   before_action :set_sheetrow, only: [:show, :edit, :copy, :update, :destroy]
+  before_filter :authorize
 
   # GET /sheetrows
   # GET /sheetrows.json
