@@ -1,8 +1,7 @@
 module Api
   class SheetrowsController < ApiController
     def index
-      @sheetrows = Sheetrow.all
-      render json: @sheetrows
+      @sheetrows = Sheetrow.where(user_id: @current_user.id)
     end
   end
 end
