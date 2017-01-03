@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210080809) do
+ActiveRecord::Schema.define(version: 20170103120803) do
 
   create_table "assignment_processes", force: :cascade do |t|
     t.string   "name"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 20161210080809) do
     t.string   "OS"
     t.string   "tools"
     t.index ["roll_id"], name: "index_sheetrows_on_roll_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "accountid"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

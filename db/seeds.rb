@@ -19,3 +19,5 @@ FactoryGirl.create(:assignment_process, name: "実装・単体")
 FactoryGirl.create(:assignment_process, name: "結合テスト")
 FactoryGirl.create(:assignment_process, name: "保守・運用")
 FactoryGirl.create(:assignment_process, name: "調査・分析")
+
+FactoryGirl.create(:user, accountid:"aaaa", password:"test")
