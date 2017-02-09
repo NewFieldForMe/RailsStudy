@@ -22,5 +22,12 @@ module CareerSheet
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
     config.autoload_paths << Rails.root.join('lib')
+    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :delete]
+      end
+    end
+    
   end
 end
