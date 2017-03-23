@@ -46,37 +46,37 @@
   </div>
 
   <div class="input-field">
-    <%= f.label :scene_type %>
+    <%= f.label "現場種類" %>
     <%= f.text_field :scene_type %>
   </div>
 
   <div class="input-field">
-    <%= f.label :start_date %>
+    <%= f.label "開始日" %>
     <%= f.text_field :start_date, class: "datepicker" %>
   </div>
 
   <div class="input-field">
-    <%= f.label :end_date %>
+    <%= f.label "終了日" %>
     <%= f.text_field :end_date, class: "datepicker" %>
   </div>
 
   <div class="input-field">
-    <%= f.label :comment_title %>
+    <%= f.label "タイトル" %>
     <%= f.text_field :comment_title %>
   </div>
 
   <div class="input-field">
-    <%= f.label :comment %>
+    <%= f.label "案件概要" %>
     <%= f.text_area :comment, class: "materialize-textarea" %>
   </div>
 
   <div>
-    <%= f.label :roll %>
+    <%= f.label "役割" %>
     <%= f.collection_select :roll_id, Roll.all, :id, :name %>
   </div>
 
   <div class="input-field">
-    <%= f.label :scale %>
+    <%= f.label "規模" %>
     <%= f.text_field :scale %>
   </div>
 
@@ -86,12 +86,12 @@
   </div>
 
   <div class="input-field">
-    <%= f.label :DB %>
+    <%= f.label "DB" %>
     <%= f.text_field :DB %>
   </div>
 
   <div class="input-field">
-    <%= f.label :OS %>
+    <%= f.label "OS" %>
     <%= f.text_field :OS %>
   </div>
 
