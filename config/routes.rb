@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   namespace :api, { format: 'json' } do
     post 'authenticate' => 'authentication#authenticate'
     get 'sheetrows' => 'sheetrows#index'
+    get 'tests' => 'tests#index'
   end
 end
